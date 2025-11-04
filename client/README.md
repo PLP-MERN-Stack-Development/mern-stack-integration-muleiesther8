@@ -1,70 +1,138 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+📝 MERN Blog Application
+📘 Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) blog application developed as part of the Week 4 MERN Stack Integration Assignment.
+It demonstrates complete integration between the front-end and back-end, covering CRUD operations, RESTful API communication, and MongoDB database connectivity.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🚀 Features Implemented
 
-### `npm test`
+Create, Read, Update, and Delete (CRUD) blog posts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+RESTful API built with Express.js and Mongoose
 
-### `npm run build`
+MongoDB database integration using Mongoose ODM
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Front-end built with React.js (Vite)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+State management using React Hooks (useState, useEffect)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Dynamic rendering of blog posts
 
-### `npm run eject`
+Input validation and error handling
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Responsive user interface
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Configurable environment variables for secure setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+⚙️ Tech Stack
+Layer	Technology
+Front-End	React.js (Vite), CSS
+Back-End	Node.js, Express.js
+Database	MongoDB (Mongoose)
+Environment	dotenv
+Tools	Postman, Nodemon, CORS, Morgan
+📂 Project Structure
+mern-stack-integration-muleiesther8/
+│
+├── server/
+│   ├── models/
+│   │   ├── post.js
+│   │   └── category.js
+│   ├── routes/
+│   │   ├── posts.js
+│   │   └── categories.js
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── PostList.jsx
+│   │   │   └── PostForm.jsx
+│   │   ├── api/
+│   │   │   └── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── package.json
+│   └── .env
+│
+└── README.md
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔌 Setup Instructions
+1️⃣ Prerequisites
 
-## Learn More
+Node.js (v18+)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+MongoDB installed locally or via Atlas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2️⃣ Clone the Repository
+git clone <your-classroom-repo-url>
+cd mern-stack-integration-muleiesther8
 
-### Code Splitting
+3️⃣ Server Setup
+cd server
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Create a .env file in the server directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+PORT=5000
+MONGO_URI=mongodb://127.0.0.1:27017/mern_blog
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Start the backend:
 
-### Advanced Configuration
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4️⃣ Client Setup
+cd client
+npm install
+npm start
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The app should now open at:
+👉 http://localhost:3000
 
-### `npm run build` fails to minify
+🧠 API Endpoints
+Method	Endpoint	Description
+GET	/api/posts	Get all blog posts
+GET	/api/posts/:id	Get a single blog post
+POST	/api/posts	Create a new blog post
+PUT	/api/posts/:id	Update an existing blog post
+DELETE	/api/posts/:id	Delete a blog post
+GET	/api/categories	Get all categories
+POST	/api/categories	Create a new category
+🧩 Advanced Features (Optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+User authentication (JWT)
+
+Image uploads
+
+Pagination and search
+
+Commenting system
+
+
+🖼️ Home Page (Blog List)
+
+Displays all created posts with titles, content, and authors.
+
+🖋️ Create Post
+
+Form for adding a new blog post dynamically.
+
+⚙️ MongoDB Connection
+
+Server connects successfully to MongoDB at startup.
+
+🧾 Author
+
+Esther Mulei
+MERN Stack Integration – Week 4 Assignment
+MuleiESTHER8
